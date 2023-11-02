@@ -72,7 +72,7 @@ mysql -u root <<< "CREATE USER $DB_USER@'%' IDENTIFIED BY '$DB_PASS'"
 mysql -u root <<< "GRANT ALL PRIVILEGES ON $DB_NAME.* TO $DB_USER@'%'"
 ```
 __Explicación sencilla:__
-1. Al importar el archivo ![.env](../practica-01-02-daw/scripts/.env), tenemos las variables de configuracion "cargadas".
+1. Al importar el archivo ![.env](../practica-01-02-daw/scripts), tenemos las variables de configuracion "cargadas".
 2. Clonamos el repositorio de la aplicación y lo movemos al directorio /var/www/html
 3. Configuramos el archivo config.php para que utilice los datos que tenemos guardados en nuestro archivo de variables, con el comando ```sed -i``` busca una cadena y la cambia
 4. Despues importamos el script de sql y le damos los permisos necesarios.
